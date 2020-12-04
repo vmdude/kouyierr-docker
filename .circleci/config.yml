@@ -77,11 +77,11 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
-      - publish-tag:
-          requires:
-            - build
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
+      # - publish-tag:
+      #     requires:
+      #       - build
+      #     filters:
+      #       tags:
+      #         only: /^v.*/
+      #       branches:
+      #         ignore: /.*/
