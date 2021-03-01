@@ -13,7 +13,7 @@ RUN apk --no-cache add \
         gcc \
         rust \
         cargo \
-        ssh-add \
+        openssh-client \
         git
 
 # as this can take a while, we put it in the build stage
