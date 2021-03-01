@@ -12,7 +12,9 @@ RUN apk --no-cache add \
         make \
         gcc \
         rust \
-        cargo
+        cargo \
+        ssh-add \
+        git
 
 # as this can take a while, we put it in the build stage
 RUN pip3 install cryptography
