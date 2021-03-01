@@ -27,8 +27,7 @@ RUN tlmgr update --self && \
         titling \
         everypage \
         background \
-        framed \
-        roboto
+        framed
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
