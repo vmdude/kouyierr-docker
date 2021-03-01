@@ -1,6 +1,21 @@
-FROM python:3.9.0-alpine
+FROM pandoc/latex:2.11.4
 
-RUN apk add --no-cache curl python3 pkgconfig python3-dev openssl-dev libffi-dev musl-dev make gcc rust cargo
+RUN apk --no-cache add \
+        curl \
+        py3-pip \
+        python3 \
+        pkgconfig \
+        python3-dev \
+        openssl-dev \
+        libffi-dev \
+        musl-dev \
+        make \
+        gcc \
+        rust \
+        cargo
+
+# as this can take a while, we put it in the build stage
+RUN pip3 install cryptography
 
 # RUN chown -R ci:ci /home/ci
 # USER ci
