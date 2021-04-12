@@ -1,4 +1,4 @@
-FROM pandoc/latex:2.11.4
+FROM pandoc/latex:2.13
 
 RUN apk --no-cache add \
         curl \
